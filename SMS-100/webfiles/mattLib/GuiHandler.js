@@ -1,0 +1,5 @@
+/**
+ * Contains GUI functions used to respond to user input.
+ * @param {logUpdater - Used to control log updates on certain js events.} logUpdater 
+ */
+function GuiHandler(n){return{printLog:function(n,t,e){var o=document.getElementById(n).innerHTML,i=document.getElementById(t).innerHTML;document.body.innerHTML="<h5>"+e+"</h5><br><h6>"+o+"</h6><span style='white-space: pre-line'>"+i+"</span>",window.print(),setInterval(function(){document.location.href="index.php"},1e3)},resetOptionsOnModalExit:function(){$("#optionsModal").on("hidden.bs.modal",function(){$(this).find("form")[0].reset()})},openLogOnClick:function(t,e){$("#"+t).click(function(){n.setIsLogUpdating(!0),n.update(e),$("#"+e).modal("show")})},disableLogLoopingOnExit:function(){$(".modal").on("hidden.bs.modal",function(){n.setIsLogUpdating(!1)})},openAlertOnClick:function(n){$("#"+n).click(function(){let t=$("#"+n).attr("id"),e=($("#btnFanState").prop("checked"),$("#r2N").html().substr(4));$("#alertSubmitBtn").val(t),"btnFanState"==t&&("On"==e?$("#alertSubmitBtn").val("btnFanOff"):$("#alertSubmitBtn").val("btnFanOn")),$("#alertModal").modal("show")})}}}
