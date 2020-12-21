@@ -12,12 +12,12 @@ FILE2 = /data/custom/html/webfiles.tar
 
 nice -19 php /data/custom/scripts/actions/power_up.php
 
-if test -f "/data/custom/scripts.tar"; then
-    rm /data/custom/scripts.tar
+if test -f "/data/custom/scripts/scripts.tar"; then
+    rm /data/custom/scripts/scripts.tar
 fi
  
-if test -f "/data/custom/webfiles.tar"; then
-    rm /data/custom/webfiles.tar
+if test -f "/data/custom/html/webfiles.tar"; then
+    rm /data/custom/html/webfiles.tar
 fi
 
 ################################################################
