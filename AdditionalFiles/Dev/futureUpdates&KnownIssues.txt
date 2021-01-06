@@ -1,0 +1,9 @@
+Change System Reboot relay from a static wait time to a variable ping based wait
+
+Change temperature thresholds to change at value instead of 1 below.
+
+
+Enabling/Disabling the Auto Pc On resets the voltmeters.  
+it'll occasionally show a voltage blip in the system.
+Additionally, If you change the setting when Sys power is off(fault state) it won't
+report the next "Sys power restore" state, because of the "supress on start" feature.
