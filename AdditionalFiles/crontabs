@@ -1,0 +1,7 @@
+0 * * * * /bin/rmsrtc setsystemtime
+#30 5 * * * /etc/init.scripts/S49ntpclient sync > /dev/null
+#* * * * * nice -n 19 php /usr/local/webif/rms-graph.php gen_graphs
+0 * * * * logrotate /etc/logrotate.conf
+* * * * * /sbin/cdp-sender
+1,59 * * * * nice -19 php /data/custom/scripts/actions/gen_csv.php
+15,25 * * * * nice -19 php /data/custom/scripts/actions/temp_monitor.php
